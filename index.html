@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>ذكريات السنة 🌸</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Tahoma", Arial;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>صور الذ وصفات السنة2025📸</h1>
+    <p>اختاري شهر وشوفي الذ طبق  فيه</p>
+
+    <select id="monthSelect">
+      <option value="">— اختاري شهر —</option>
+      <option value="jan.jpg">يناير</option>
+      <option value="feb.jpg">فبراير</option>
+      <option value="mar.jpg">مارس</option>
+      <option value="apr.jpg">أبريل</option>
+      <option value="may.jpg">مايو</option>
+      <option value="jun.jpg">يونيو</option>
+      <option value="jul.jpg">يوليو</option>
+      <option value="aug.jpg">أغسطس</option>
+      <option value="sep.jpg">سبتمبر</option>
+      <option value="oct.jpg">أكتوبر</option>
+      <option value="nov.jpg">نوفمبر</option>
+      <option value="dec.jpg">ديسمبر</option>
+    </select>
+
+    <img id="memoryImage" alt="صورة طبق الشهر ">
+  </div>
+
+  <script>
+    const select = document.getElementById("monthSelect");
+    const image = document.getElementById("memoryImage");
+
+    select.addEventListener("change", function () {
+      if (this.value === "") {
+        image.style.display = "none";
+      } else {
+        image.src = this.value;
+        image.style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>
